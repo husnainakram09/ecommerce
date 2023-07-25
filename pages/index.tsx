@@ -1,10 +1,17 @@
-
+import { Box, useTheme, Text } from "@chakra-ui/react";
+import InputComponent from "@/component/Inputs";
 export default function Home() {
+  const theme = useTheme();
+  const { primary, secondaryBlue } = theme.colors;
+
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <Box bg='secondaryBlue.100' >
+        <Text color="primary.100">
+          Hello world!
+        </Text>
+      </Box >
+      <InputComponent />
     </>
   )
 }
