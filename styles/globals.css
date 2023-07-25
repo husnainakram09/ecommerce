@@ -3,22 +3,33 @@
 body {
   font-family: "Josefin Sans", sans-serif;
 }
+
 p {
   font-family: "Josefin Sans", sans-serif;
 }
+
 table {
   font-family: "Josefin Sans", sans-serif;
 }
+
 h2 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
 }
+
 .transparent-bg {
   background: transparent !important;
 }
+
 input {
   font-family: "Josefin Sans", sans-serif !important;
 }
+
 button {
   font-family: "Josefin Sans", sans-serif !important;
+}
+
+select {
+  font-family: "Josefin Sans", sans-serif !important;
+
 }
