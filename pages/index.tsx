@@ -8,12 +8,6 @@ export default function Home() {
 
   return (
     <>
-      <Box bg='secondaryBlue.100' >
-        <Text color="primary.100">
-          Hello world!
-        </Text>
-      </Box >
-      <InputComponent />
       <TopNav />
       <WithSubnavigation/>
     </>

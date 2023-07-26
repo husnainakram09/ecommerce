@@ -1,38 +1,40 @@
-import { Box, Flex, Icon, Select, SimpleGrid, Text, Image } from "@chakra-ui/react";
-import user from '../../public/Assets/user.svg'
-import {BsPerson} from 'react-icons/bs'
+import { Box, Flex, Icon, Select, SimpleGrid, Text, useTheme, Grid, GridItem } from "@chakra-ui/react";
+import user from '../../public/Assets/user.svg';
+import cart from '../../public/Assets/cart.svg';
+import wishList from '../../public/Assets/wishList.svg';
+
+
+import Image from "next/image";
 const TopNav = (props: any) => {
+    const theme = useTheme();
+    const { primary, secondaryBlue, purple } = theme.colors;
     return (
         <>
-            <SimpleGrid columns={8} spacing={10} bg='gray'>
-                {/* First Column */}
-                <Box gridColumn="span 2" height="50px" display="flex" alignItems="center" justifyContent="end">
-                    <Text color='white'>zainbinshakoor</Text>
-                </Box>
-                <Box gridColumn="span 1" height="50px" display="flex" alignItems="center" justifyContent="start">
-                    <Text color='white'>03117406944</Text>
 
-                </Box>
+            <Grid templateColumns='repeat(2, 1fr)' gap={6} color='white' bg={'purple.100'}>
+                <GridItem w='100%' h='10' display={'flex'} justifyContent={'center'} alignItems={'center'} gap={10}>
+                    <>
+                        <Text>ZHSTORE@GMAIL.COM</Text>
+                        <Text>11223344</Text>
+                    </>
+                </GridItem>
+                <GridItem w='100%' h='10' display={'flex'} alignItems={'center'} justifyContent={'start'} gap={10}>
+                    <>
+                        <Box display={'flex'} alignItems={'flex-start'} justifyContent={'center'}>
+                            <Text>LOGIN</Text>
+                            <Image src={user} alt="" />
+                        </Box>
+                        <Box display={'flex'} alignItems={'flex-start'} justifyContent={'center'}>
+                            <Text>wishList</Text>
+                            <Image src={wishList} alt="" />
+                        </Box>
+                        <Box display={'flex'} alignItems={'flex-start'} justifyContent={'center'}>
+                            <Image src={cart} alt="" />
+                        </Box>
+                    </>
+                </GridItem>
 
-                {/* Second Column */}
-                <Box gridColumn="span 2" height="50px" display="flex" alignItems="center" justifyContent="space-between" >
-                    <Select placeholder='English' variant='unstyled' width='85px' color='white'>
-                        <option value='URDU'>URDU</option>
-                    </Select>
-                    <Select placeholder='USD' variant='unstyled' width='65px' color='white'>
-                        <option value='PKR'>PKR</option>
-                    </Select>
-                    <Text color='white'>Login </Text>
-                    <Text color='white'>WishList</Text>
-                    <Text color='white'>Cart</Text>
-
-
-                </Box>
-
-
-                {/* Third Column */}
-
-            </SimpleGrid>
+            </Grid>
         </>
     );
 };

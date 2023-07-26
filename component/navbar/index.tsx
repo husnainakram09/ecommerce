@@ -51,25 +51,27 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} justifyContent='start' alignItems='center'>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'right' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Hakto
-          </Text>
+          <Flex flex={{ md: 1 }} justifyContent='center' alignItems='center'>
 
-          <Flex display={{ base: 'none', md: 'flex' }} flex={{md:1}}  justifyContent='center' alignItems='center'>
+            <Text
+              textAlign={useBreakpointValue({ base: 'center', md: 'right' })}
+              color={useColorModeValue('gray.800', 'white')} fontSize={'30px'}>
+
+              Hakto
+            </Text>
+          </Flex>
+          <Flex display={{ base: 'none', md: 'flex' }} flex={{ md: 1 }}  >
             <DesktopNav />
           </Flex>
         </Flex>
 
         <Stack
-        display={{ base: 'none', md: 'flex' }}
+          display={{ base: 'none', md: 'flex' }}
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <InputComponent/>
+          <InputComponent />
         </Stack>
       </Flex>
 
@@ -95,8 +97,9 @@ const DesktopNav = () => {
                 as="a"
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'sm'}
-                fontWeight={500}
+                fontSize={'18px'}
+                fontWeight={700}
+                fontFamily={"Josefin Sans"}
                 color={linkColor}
                 _hover={{
                   textDecoration: 'none',
@@ -114,7 +117,7 @@ const DesktopNav = () => {
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}>
-                <Stack>
+                <Stack fontFamily={"Josefin Sans"}>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
