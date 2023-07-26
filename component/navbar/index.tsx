@@ -55,7 +55,9 @@ export default function WithSubnavigation() {
 
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'right' })}
-              color={useColorModeValue('gray.800', 'white')} fontSize={'30px'}>
+              color={useColorModeValue('gray.800', 'white')} fontSize={'30px'} cursor={'pointer'}
+              _hover={{ color: 'primary.100' }}
+            >
 
               Hakto
             </Text>
@@ -70,7 +72,9 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={6}>
+          spacing={6}
+          marginEnd={{ md: '50px' }}
+        >
           <InputComponent />
         </Stack>
       </Flex>
@@ -103,7 +107,7 @@ const DesktopNav = () => {
                 color={linkColor}
                 _hover={{
                   textDecoration: 'none',
-                  color: linkHoverColor,
+                  color: 'primary.100',
                 }}>
                 {navItem.label}
               </Box>
