@@ -302,6 +302,8 @@ export const theme = extendTheme({
     primary: {
       100: '#FB2E86',
       200: '#FB2448',
+      300: '#F2F0FF',
+      400: '000000'
     },
     secondaryBlue: {
       100: '#151875',
@@ -316,6 +318,9 @@ export const theme = extendTheme({
     skyBlue: {
       100: '#F3F9FF',
       200: '#F1F0FF'
+    },
+    textColor:{
+      100:'#8A8FB9'
     }
   },
 });
