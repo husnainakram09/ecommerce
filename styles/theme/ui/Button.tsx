@@ -3,7 +3,7 @@ import { Button } from "@chakra-ui/button";
 import { Box, useTheme } from "@chakra-ui/react";
 interface IProps { };
 
-const ButtonCustom: FC<IProps> = (props) => {
+const HaktoButton: FC<IProps> = (props) => {
     const theme = useTheme();
     const { primary } = theme.colors;
     return (
@@ -19,4 +19,4 @@ const ButtonCustom: FC<IProps> = (props) => {
     )
 };
 
-export default ButtonCustom;
+export default HaktoButton;

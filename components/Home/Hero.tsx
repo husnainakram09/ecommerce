@@ -1,11 +1,7 @@
 import { Box, Grid, GridItem, useTheme, Text } from "@chakra-ui/react";
 import React, { FC } from "react";
 import Image from "next/image";
-import lamp from '@/public/Assets/lamp.png';
-import blob from '@/public/Assets/blob.png';
-import chair from '@/public/Assets/chair.png';
-import blobDiscount from '@/public/Assets/blobDiscount.png';
-import ButtonCustom from "../Buttons";
+import { HaktoButton } from "@ui/index";
 
 interface IProps { }
 
@@ -23,7 +19,7 @@ const Hero: FC<IProps> = (props) => {
         >
             <GridItem rowSpan={2} colSpan={16}> {/* Adjusted colSpan */}
                 <Box display="flex"  >
-                    <Image src={lamp} alt="" />
+                    <Image src={"/Assets/lamp.png"} alt="" width={100} height={100} />
                 </Box>
                 <Box position="absolute" top="60%" left="35%" transform="translate(-50%, -50%)" textAlign="center">
                     <Text color="primary.100" fontSize="24px" fontWeight="bold" mb="2">
@@ -36,16 +32,16 @@ const Hero: FC<IProps> = (props) => {
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis corporis quam, quidem voluptas aut tempora quia reprehenderit voluptatibus dolore quod quos,
                     </Text>
                     <Box mt={{ md: '5' }}>
-                        <ButtonCustom />
+                        <HaktoButton />
                     </Box>
                 </Box>
             </GridItem>
             <GridItem rowSpan={2} colSpan={8} position={'relative'}> {/* Adjusted colSpan */}
                 <Box position={'absolute'} top={5} right={50} w={450}>
-                    <Image src={blob} alt="" />
+                    <Image src={"/Assets/blob.png"} alt="" width={100} height={100} />
                 </Box>
                 <Box position={'absolute'} top={2} right={0} w={150}>
-                    <Image src={blobDiscount} alt="" />
+                    <Image src={"/Assets/blobDiscount.png"} alt="" width={100} height={100} />
                 </Box>
                 <Box position={'absolute'} top={50} right={63} >
                     <Text color={'white'} fontSize={'18px'} fontWeight={700}> 50 % </Text>
@@ -53,7 +49,7 @@ const Hero: FC<IProps> = (props) => {
 
                 </Box>
                 <Box position={'absolute'} top={10} right={100} w={400}>
-                    <Image src={chair} alt="" />
+                    <Image src={"/Assets/chair.png"} alt="" width={100} height={100} />
                 </Box>
             </GridItem>
         </Grid>

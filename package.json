@@ -27,5 +27,9 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "typescript": "5.1.6"
-  }
+  },
+  "main": "_app.tsx",
+  "repository": "https://github.com/husnainakram09/ecommerce.git",
+  "author": "husnainakram09 <“husnainakram7860@gmail.com”>",
+  "license": "MIT"
 }

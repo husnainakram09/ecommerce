@@ -7,7 +7,7 @@ interface IProps {
     placeholder?: string;
 }
 
-const InputComponent: FC<IProps> = (props) => {
+const HaktoInput: FC<IProps> = (props) => {
     const theme = useTheme();
     const { primary, secondaryBlue } = theme.colors;
 
@@ -25,4 +25,4 @@ const InputComponent: FC<IProps> = (props) => {
     );
 };
 
-export default InputComponent;
+export default HaktoInput;
