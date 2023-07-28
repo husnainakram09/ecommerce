@@ -11,6 +11,7 @@ const WebLayout: React.FC<propsType> = ({ children }) => {
         <div>
             <TopNav />
             <WithSubnavigation />
+            {children}
         </div>
     )
 }
