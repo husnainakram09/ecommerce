@@ -32,7 +32,7 @@ const Hero: FC<IProps> = (props) => {
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis corporis quam, quidem voluptas aut tempora quia reprehenderit voluptatibus dolore quod quos,
                     </Text>
                     <Box mt={{ md: '5' }}>
-                        <HaktoButton />
+                        {/* <HaktoButton /> */}
                     </Box>
                 </Box>
             </GridItem>

@@ -305,6 +305,9 @@ export const theme = extendTheme({
       300: '#F2F0FF',
       400: '000000'
     },
+    success: {
+      100: '#19D16F'
+    },
     secondaryBlue: {
       100: '#151875',
       200: '#2F1AC4',
@@ -319,8 +322,8 @@ export const theme = extendTheme({
       100: '#F3F9FF',
       200: '#F1F0FF'
     },
-    textColor:{
-      100:'#8A8FB9'
+    textColor: {
+      100: '#8A8FB9'
     }
   },
 });
