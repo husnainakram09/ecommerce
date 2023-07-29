@@ -4,7 +4,7 @@ import { Box, ButtonProps, useTheme } from "@chakra-ui/react";
 interface IProps {
     button?: ButtonProps
     text: any
-    type: "primary" | "success"
+    type?: "primary" | "success"
 };
 
 const HaktoButton: FC<IProps> = ({ button, text, type = "primary" }) => {
