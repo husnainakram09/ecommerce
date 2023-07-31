@@ -31,5 +31,8 @@
   "main": "_app.tsx",
   "repository": "https://github.com/husnainakram09/ecommerce.git",
   "author": "husnainakram09 <“husnainakram7860@gmail.com”>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.64.1"
+  }
 }
