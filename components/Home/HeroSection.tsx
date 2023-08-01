@@ -29,7 +29,7 @@ const Hero: FC<IProps> = (props) => {
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis corporis quam, quidem voluptas aut tempora quia reprehenderit voluptatibus dolore quod quos,
                         </Text>
                         <Box>
-                            <HaktoButton text={"Shop Now"} />
+                            <HaktoButton text={"Shop Now"} size="lg" button={{ p: "0 40px" }} />
                         </Box>
                     </Box>
                 </Stack>

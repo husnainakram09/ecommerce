@@ -1,5 +1,6 @@
-import { Box, useTheme, Text } from "@chakra-ui/react";
+import { Box, useTheme, Text, Container } from "@chakra-ui/react";
 import { Hero } from "@components/Home";
+import FeaturedProducts from "@components/Home/FeaturedProducts";
 import WebLayout from "@layout/index";
 
 
@@ -11,6 +12,9 @@ export default function Home() {
     <>
       <WebLayout>
         <Hero />
+        <Container maxW={"80vw"}>
+          <FeaturedProducts />
+        </Container>
       </WebLayout>
     </>
   )

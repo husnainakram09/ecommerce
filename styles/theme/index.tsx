@@ -311,7 +311,8 @@ export const theme = extendTheme({
     secondaryBlue: {
       100: '#151875',
       200: '#2F1AC4',
-      300: '#3F509E'
+      300: '#3F509E',
+      400: '#1A0B5B'
     },
     purple: {
       100: '#7E33E0',

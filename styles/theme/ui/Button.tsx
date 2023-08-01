@@ -5,18 +5,17 @@ interface IProps {
     button?: ButtonProps
     text: any
     type?: "primary" | "success"
+    size?: "sm" | "md" | "lg"
 };
 
-const HaktoButton: FC<IProps> = ({ button, text, type = "primary" }) => {
+const HaktoButton: FC<IProps> = ({ button, text, type = "primary", size }) => {
     const theme = useTheme();
     const { primary } = theme.colors;
     return (
         // never centered any element in kit unless it is necessary everywhere.
         // <Box display={'flex'} ms={130}>
         <>
-            <Button size={"lg"}
-                height='48px'
-                width='200px'
+            <Button size={size}
                 color={'white'}
                 bg={`${type}.100`}
                 _hover={{ bg: 'primary.100' }}
