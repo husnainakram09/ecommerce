@@ -325,6 +325,9 @@ export const theme = extendTheme({
     },
     textColor: {
       100: '#8A8FB9'
+    },
+    imageBg: {
+      100: '#F6F7FB'
     }
   },
 });

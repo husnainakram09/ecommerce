@@ -2,15 +2,12 @@
 import { Stack, InputGroup, Input, InputRightElement, useTheme } from "@chakra-ui/react";
 import React, { FC } from "react";
 import { Search2Icon } from "@chakra-ui/icons";
-
 interface IProps {
     placeholder?: string;
 }
-
 const HaktoInput: FC<IProps> = (props) => {
     const theme = useTheme();
     const { primary, secondaryBlue } = theme.colors;
-
     return (
         <>
             <Stack spacing={4}>
@@ -24,5 +21,4 @@ const HaktoInput: FC<IProps> = (props) => {
         </>
     );
 };
-
 export default HaktoInput;
