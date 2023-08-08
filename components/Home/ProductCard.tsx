@@ -27,7 +27,7 @@ const ProductCard = () => {
                         <HaktoButton text={"View Details"} type='success' />
                     </Box>
                 }
-                <Box h="100%" textAlign={"center"} transition={'.3s ease'} bgColor={isMouseEnter ? "secondaryBlue.100" : "transparent"} p={'8'}>
+                <Box h="100%" textAlign={"center"} transition={'.3s ease'} bgColor={isMouseEnter ? "secondaryBlue.100" : "transparent"} p={'4'}>
                     <Text fontSize={24} color={isMouseEnter ? "white" : 'primary.100'}>
                         Cantilever chair
                     </Text>
@@ -36,7 +36,7 @@ const ProductCard = () => {
                         <Box w="30px" h="5px" bg="blue.300" borderRadius="8px" />
                         <Box w="30px" h="5px" bg="green.300" borderRadius="8px" />
                     </Box>
-                    <Text fontSize={18} color={isMouseEnter ? "white" : 'secondaryBlue.100'}>
+                    <Text fontSize={18} color={isMouseEnter ? "white" : 'secondaryBlue.100'} mt={1}>
                         Code - Y523201
                     </Text>
                     <Text fontSize={18} color={isMouseEnter ? "white" : 'secondaryBlue.100'}>
