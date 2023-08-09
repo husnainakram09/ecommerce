@@ -1,11 +1,11 @@
 import React, { FC, useEffect, useState } from "react";
-import { Box, HStack, Text } from "@chakra-ui/react"
+import { Box, HStack, SimpleGrid, Text } from "@chakra-ui/react"
 import LatestProductCard from "./LatestProductCard";
 
 interface IProps { };
 
 const LatestProduct: FC<IProps> = (props) => {
-    const [tab, setTab] = useState({ name: "New Arrival" });
+    const [tab, setTab] = useState({ name: "all" });
     console.log(tab);
 
     const [works, setWorks] = useState<any>([])
@@ -92,7 +92,7 @@ const LatestProduct: FC<IProps> = (props) => {
                     )
                 })}
             </Box>
-            <HStack justify={'center'}>
+            <SimpleGrid columns={{sm:1,md:3}} justifyItems={'center'}>
                 {works.map((work: any) => {
                     return (
                         <div
@@ -102,7 +102,7 @@ const LatestProduct: FC<IProps> = (props) => {
                         </div>
                     )
                 })}
-            </HStack>
+            </SimpleGrid>
         </>
     )
 };
