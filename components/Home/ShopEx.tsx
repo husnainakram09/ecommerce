@@ -5,6 +5,12 @@ import ShopCard from "./ShopCard";
 interface IProps { };
 
 const ShopEx: FC<IProps> = (props) => {
+    const Images = [
+        '/Assets/delivery.svg',
+        '/Assets/cashback.svg',
+        '/Assets/quality.svg',
+        '/Assets/hours.svg',
+    ]
     return (
         <>
             <Box textAlign={"center"} mt={20}>
@@ -12,14 +18,14 @@ const ShopEx: FC<IProps> = (props) => {
                     What Shopex Offer!
                 </Text>
             </Box>
-            <HStack justify={"center"}>
+            <HStack justify={"center"} mt={10}>
                 {/* <AliceCarousel
                     responsive={responsive}
                     controlsStrategy="alternate"
                 > */}
-                {[1].map((product: any, index: any) => {
+                {Images.map((product: any, index: any) => {
                     return (
-                        <ShopCard key={index} />
+                        <ShopCard key={index} image={product} />
                     )
                 })}
                 {/* </AliceCarousel > */}
