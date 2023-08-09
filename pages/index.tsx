@@ -3,6 +3,7 @@ import { Hero } from "@components/Home";
 import FeaturedProducts from "@components/Home/FeaturedProducts";
 import LatestProduct from "@components/Home/LeatestProducts";
 import WebLayout from "@layout/index";
+import ShopEx from "@components/Home/ShopEx";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Container maxW={"80vw"}>
           <FeaturedProducts />
           <LatestProduct />
+          <ShopEx />
         </Container>
       </WebLayout>
     </>
