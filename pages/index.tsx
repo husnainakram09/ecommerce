@@ -4,6 +4,7 @@ import FeaturedProducts from "@components/Home/FeaturedProducts";
 import LatestProduct from "@components/Home/LeatestProducts";
 import WebLayout from "@layout/index";
 import ShopEx from "@components/Home/ShopEx";
+import UniqueProduct from "@components/Home/UniqueProduct";
 
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
           <LatestProduct />
           <ShopEx />
         </Container>
+        <Container maxW={"100vw"}>
+        </Container>
+          <UniqueProduct />
       </WebLayout>
     </>
   )
