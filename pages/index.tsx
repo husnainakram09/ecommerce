@@ -5,7 +5,7 @@ import LatestProduct from "@components/Home/LeatestProducts";
 import WebLayout from "@layout/index";
 import ShopEx from "@components/Home/ShopEx";
 import UniqueProduct from "@components/Home/UniqueProduct";
-
+import TrendingProduct from "@components/Home/TrendingProduct";
 
 export default function Home() {
   const theme = useTheme();
@@ -20,9 +20,10 @@ export default function Home() {
           <LatestProduct />
           <ShopEx />
         </Container>
-        <Container maxW={"100vw"}>
+        <UniqueProduct />
+        <Container maxW={"80vw"}>
+          <TrendingProduct />
         </Container>
-          <UniqueProduct />
       </WebLayout>
     </>
   )
