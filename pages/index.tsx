@@ -7,6 +7,7 @@ import ShopEx from "@components/Home/ShopEx";
 import UniqueProduct from "@components/Home/UniqueProduct";
 import TrendingProduct from "@components/Home/TrendingProduct";
 import DiscountItem from "@components/Home/DiscountItem";
+import Categories from "@components/Home/Categories";
 export default function Home() {
   const theme = useTheme();
   const { primary, secondaryBlue } = theme.colors;
@@ -24,6 +25,7 @@ export default function Home() {
         <Container maxW={"80vw"}>
           <TrendingProduct />
           <DiscountItem />
+          <Categories />
         </Container>
       </WebLayout>
     </>
