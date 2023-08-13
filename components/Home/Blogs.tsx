@@ -21,7 +21,9 @@ const Blogs: FC<IProps> = (props) => {
             <SimpleGrid columns={{ sm: 1, md: 3 }} justifyItems={'center'}>
                 {images.map((product: any, index: any) => {
                     return (
-                        <BlogCardImage img={product}/>
+                        <Box key={index}>
+                            <BlogCardImage img={product} />
+                        </Box>
                     )
                 })}
             </SimpleGrid>
