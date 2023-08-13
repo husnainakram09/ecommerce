@@ -9,6 +9,8 @@ import TrendingProduct from "@components/Home/TrendingProduct";
 import DiscountItem from "@components/Home/DiscountItem";
 import Categories from "@components/Home/Categories";
 import NewsLetter from "@components/Home/NewsLetter";
+import Brands from "@components/Home/Brands";
+import Blogs from "@components/Home/Blogs";
 export default function Home() {
   const theme = useTheme();
   const { primary, secondaryBlue } = theme.colors;
@@ -29,6 +31,10 @@ export default function Home() {
           <Categories />
         </Container>
         <NewsLetter />
+        <Container maxW={"80vw"}>
+          <Brands />
+          <Blogs />
+        </Container>
       </WebLayout>
     </>
   )
