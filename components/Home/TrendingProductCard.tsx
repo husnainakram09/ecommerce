@@ -7,8 +7,6 @@ interface IProps {
  };
 
 const TrendingProductCard:FC<IProps> = ({image}) => {
-    console.log(image);
-    
     return (
         <>
             <Stack h={380} w={270} borderRadius={10} boxShadow={"0px 0px 25px 0px rgba(0, 0, 0, 0.1)"}  cursor={'pointer'} p={3}>
