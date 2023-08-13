@@ -19,16 +19,12 @@ const ShopEx: FC<IProps> = (props) => {
                 </Text>
             </Box>
             <HStack justify={"center"} mt={10}>
-                {/* <AliceCarousel
-                    responsive={responsive}
-                    controlsStrategy="alternate"
-                > */}
+
                 {Images.map((product: any, index: any) => {
                     return (
                         <ShopCard key={index} image={product} />
                     )
                 })}
-                {/* </AliceCarousel > */}
             </HStack >
 
         </>
