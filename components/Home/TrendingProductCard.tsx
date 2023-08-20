@@ -1,20 +1,21 @@
 import { Box, Divider, Spacer, Stack, Text } from '@chakra-ui/react'
 import HaktoButton from '@ui/Button'
 import Cart from '@ui/Cart'
+import Image from 'next/image'
 import React, { FC } from 'react'
 interface IProps {
-    image:any
- };
+    image: any
+};
 
-const TrendingProductCard:FC<IProps> = ({image}) => {
+const TrendingProductCard: FC<IProps> = ({ image }) => {
     return (
         <>
-            <Stack h={380} w={270} borderRadius={10} boxShadow={"0px 0px 25px 0px rgba(0, 0, 0, 0.1)"}  cursor={'pointer'} p={3}>
+            <Stack borderRadius={10} boxShadow={"0px 0px 25px 0px rgba(0, 0, 0, 0.1)"} cursor={'pointer'} p={3}>
 
-                <Stack h={"100%"} height={"200%"} align={"center"} justify={"flex-end"} bgImage={image} bgSize={"contain"} bgPos={"center"} bgColor={'#F6F7FB'} bgRepeat={"no-repeat"} pos={"relative"}>
-
+                <Stack h={'100%'} bgColor={'#F6F7FB'} >
+                    <Image src={image} alt='Img' width={500} height={500} />
                 </Stack>
-                <Box h="40%" textAlign={"center"} transition={'.3s ease'} bgColor={"transparent"} p={'1'}>
+                <Box textAlign={"center"} transition={'.3s ease'} bgColor={"transparent"} p={1}>
                     <Text fontSize={24} color={'#151875'}>
                         Cantilever chair
                     </Text>

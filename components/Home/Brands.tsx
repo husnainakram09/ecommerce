@@ -5,7 +5,7 @@ interface IProps { };
 const Brands: FC<IProps> = (props) => {
     return (
         <>
-            <Stack display={'flex'} alignItems={'center'} justifyContent={'center'} >
+            <Stack  display={'flex'} alignItems={'center'} justifyContent={'center'} >
                 <Image src={'/Assets/brands.png'} alt='' width={800} height={800} />
             </Stack>
         </>

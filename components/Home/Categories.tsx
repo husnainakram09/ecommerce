@@ -8,7 +8,6 @@ const Categories: FC<IProps> = (props) => {
         '/Assets/trendOne.png',
         '/Assets/trendTwo.png',
         '/Assets/trendThree.png',
-        '/Assets/trendOne.png',
     ]
     return (
         <>
@@ -17,13 +16,13 @@ const Categories: FC<IProps> = (props) => {
                     Top Categories
                 </Text>
             </Box>
-            <HStack justify={"center"} mt={10}>
+            <SimpleGrid columns={{ sm: 1, md: 3, lg: 3 }} mt={10}>
                 {Images.map((product: any, index: any) => {
                     return (
                         <CategoriesCard key={index} image={product} />
                     )
                 })}
-            </HStack >
+            </SimpleGrid >
 
         </>
     );

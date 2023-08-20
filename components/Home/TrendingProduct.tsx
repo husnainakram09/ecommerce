@@ -23,15 +23,15 @@ const ShopEx: FC<IProps> = (props) => {
                     Trending Products
                 </Text>
             </Box>
-            <HStack justify={"center"} mt={10}>
+            <SimpleGrid columns={{ sm: 1, md: 4, lg: 4 }} justifyContent={"center"} gap={2} mt={10}>
                 {Images.map((product: any, index: any) => {
                     return (
                         <TrendingProductCard key={index} image={product} />
                     )
                 })}
-            </HStack >
-            <Flex display={'flex'} justify={'space-evenly'} gap={5} mt={5}>
-                <Box bgColor={'#FFF6FB'} h='220px' w={'30%'} p={5} borderRadius={10}>
+            </SimpleGrid >
+            <Flex display={{ sm: 'block', md: 'flex', lg: 'flex' }} justify={'space-evenly'} gap={5} mt={5}>
+                <Box bgColor={'#FFF6FB'} h='220px' w={{ sm: '30%', md: '30%', lg: '30%' }} p={5} borderRadius={10}>
                     <Text fontSize={"20px"} color={'#151875'}>23% off in all products</Text>
                     <Text fontSize={"20px"} color={'#FB2E86'} as={'ins'}>Shop Now</Text>
                     <Box display={'flex'} justifyContent={'end'}>
@@ -39,7 +39,7 @@ const ShopEx: FC<IProps> = (props) => {
                     </Box>
 
                 </Box>
-                <Box bgColor={'#EEEFFB'} h='220px' w={'30%'} p={5} borderRadius={10}>
+                <Box bgColor={'#EEEFFB'} h='220px' w={{ sm: '30%', md: '30%', lg: '30%' }} mt={{ base: 2, md: 0, lg: 0 }} p={5} borderRadius={10}>
                     <Text fontSize={"20px"} color={'#151875'}>23% off in all products</Text>
                     <Text fontSize={"20px"} color={'#FB2E86'} as={'ins'}>View Collection</Text>
                     <Box display={'flex'} justifyContent={'end'}>
@@ -47,7 +47,7 @@ const ShopEx: FC<IProps> = (props) => {
                     </Box>
 
                 </Box>
-                <Box h='220px' w={'30%'}  borderRadius={10}>
+                <Box h='220px' w={{ sm: '30%', md: '30%', lg: '30%' }} borderRadius={10}>
                     {
                         Discount.map((item, index) => {
                             return (

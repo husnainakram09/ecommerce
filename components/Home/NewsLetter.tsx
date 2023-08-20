@@ -5,7 +5,7 @@ import HaktoButton from '@ui/Button';
 const NewsLetter = () => {
     return (
         <Flex
-            height="80vh"
+            height={{ base: "20vh", md: "80vh", lg: "80vh" }}
             justifyContent="center"
             alignItems="center"
             bgImage="url('/Assets/newsLetter.png')"
@@ -17,7 +17,8 @@ const NewsLetter = () => {
         >
             <Stack spacing={4} align="center">
                 {/* Your text content */}
-                <Text color="#151875"  fontSize={"20px"} fontWeight={'500 !important'} lineHeight={1.2}>
+
+                <Text color="#151875" display={{ base: 'none', md: 'block', lg: 'block' }} fontSize={"20px"} fontWeight={'500 !important'} lineHeight={1.2}>
                     Get Leatest Update By Subscribe
                     0ur Newslater
                 </Text>

@@ -11,32 +11,38 @@ const Hero: FC<IProps> = (props) => {
 
     return (
         <Grid
-            h="83%"
-            gridTemplateColumns="repeat(2, 1fr)" // Adjusted templateColumns
+            gridTemplateColumns="repeat(4, 1fr)" // Adjusted templateColumns
             bg={primary["300"]}
-            position="relative"
+            h={{ lg: "100%", md: '100%', base: "50%" }}
         >
-            <GridItem bgImage={"/Assets/lamp.png"} bgSize={"40%"} bgRepeat={"no-repeat"} bgPos={"10% 0"}>
-                <Stack h={"100%"} alignItems={"flex-end"} justify={"center"} mr={"-10%"}>
-                    <Box w="500px">
-                        <Text color="primary.100" fontSize="24px" fontWeight="bold" mb="2">
-                            Best Furniture For Your Castle....
-                        </Text>
-                        <Text fontSize={"40px"} fontWeight={'700 !important'} color='primary.400' lineHeight={"1.2"}>
-                            New Furniture Collection Trends in 2020
-                        </Text>
-                        <Text fontSize={"14px"} color='textColor.100'  >
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis corporis quam, quidem voluptas aut tempora quia reprehenderit voluptatibus dolore quod quos,
-                        </Text>
-                        <Box>
-                            <HaktoButton text={"Shop Now"} size="lg" button={{ p: "0 40px" }} />
-                        </Box>
+            <GridItem display={{ base: "none", md: "flex", lg: 'flex' }} justifyContent={'start'}> {/* Adjusted colSpan */}
+                <Box>
+                    <Image src="/Assets/lamp.png" alt="" width={400} height={400} />
+                </Box>
+
+            </GridItem>
+
+            <GridItem display={"flex"} alignItems={'center'} justifyContent={'start'} >
+                <Box w={{ lg: "600px", base: "350px", md: '500px' }} justifyContent={'center'} alignItems={'center'} p={5}>
+                    <Text color="primary.100" fontSize="24px" fontWeight="bold">
+                        Best Furniture For Your Castle....
+                    </Text>
+                    <Text fontSize={{ base: '25px', lg: "40px" }} fontWeight="700" color="primary.400" lineHeight={{ lg: "1.2" }}>
+                        New Furniture Collection Trends in 2020
+                    </Text>
+                    <Text fontSize="14px" color="textColor.100">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis corporis quam, quidem voluptas aut tempora quia reprehenderit voluptatibus dolore quod quos,
+                    </Text>
+                    <Box mt={{ base: 5 }}>
+                        <HaktoButton text="Shop Now" size="lg" button={{ p: "0 40px" }} />
                     </Box>
-                </Stack>
+                </Box>
             </GridItem>
-            <GridItem bgImage={"/Assets/sofa_promotion.png"} bgSize={"70%"} bgRepeat={"no-repeat"} bgPos={"center"}> {/* Adjusted colSpan */}
+
+            <GridItem colSpan={2} display={{ base: 'none', md: 'flex', lg: 'flex' }} alignItems={'center'} justifyContent={'center'}> {/* Adjusted colSpan */}
+                <Image src="/Assets/sofa_promotion.png" alt="" width={500} height={500} />
             </GridItem>
-        </Grid>
+        </Grid >
     );
 };
 

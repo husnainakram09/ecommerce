@@ -94,7 +94,7 @@ export default function Footer() {
                                 _focus={{
                                     bg: 'whiteAlpha.300',
                                 }}
-                                w={300}
+                                w={{sm:200,md:300,lg:300}}
                             />
                             <IconButton
                                 bg={'#FB2E86'}
