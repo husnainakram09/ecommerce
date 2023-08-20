@@ -15,17 +15,18 @@ const UniqueProduct: FC<IProps> = (props) => {
     ];
     return (
         <Grid
-            h="50%"
-            gridTemplateColumns="repeat(2, 1fr)" // Adjusted templateColumns
+            gridTemplateColumns={{ sm: "repeat(2, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(2, 1fr)" }} // Adjusted templateColumns
             bg={primary["300"]}
             position="relative"
             mt={20}
         >
-            <GridItem bgImage={"/Assets/trend.png"} bgSize={"50%"} bgRepeat={"no-repeat"} bgPos={"center"}> {/* Adjusted colSpan */}
-            </GridItem>
+            <GridItem display={'flex'} alignItems={'center'} justifyContent={'center'} ml={{ base: 5 }}>
+                <Image src={'/Assets/trend.png'} alt="" width={500} height={500} />
+            </GridItem >
+
             <GridItem >
                 <Stack h={"100%"} alignItems={"flex-start"} justify={"center"} >
-                    <Box w="500px">
+                    <Box w={{ sm: "800px", md: "500px", lg: "500px" }} p={5}>
 
                         <Text fontSize={"40px"} fontWeight={'700 !important'} color='#151875' lineHeight={"1.2"}>
                             Unique Features Of leatest &
@@ -49,7 +50,7 @@ const UniqueProduct: FC<IProps> = (props) => {
                 </Stack>
             </GridItem>
 
-        </Grid>
+        </Grid >
     );
 };
 

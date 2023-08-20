@@ -27,6 +27,7 @@
     "react-alice-carousel": "^2.7.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
+    "react-multi-carousel": "^2.8.4",
     "typescript": "5.1.6"
   },
   "main": "_app.tsx",

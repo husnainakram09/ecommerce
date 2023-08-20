@@ -23,7 +23,7 @@ const ProductCard = () => {
 
                 </Stack>
                 {isMouseEnter &&
-                    <Box display={'flex'} justifyContent={'center'}>
+                    <Box display={'flex'} justifyContent={'center'}  >
                         <HaktoButton text={"View Details"} type='success' />
                     </Box>
                 }

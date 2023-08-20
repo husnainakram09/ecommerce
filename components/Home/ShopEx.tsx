@@ -18,14 +18,15 @@ const ShopEx: FC<IProps> = (props) => {
                     What Shopex Offer!
                 </Text>
             </Box>
-            <HStack justify={"center"} mt={10}>
+            <SimpleGrid columns={{ base: 1, md: 4, lg: 4 }} mt={10}>
 
                 {Images.map((product: any, index: any) => {
                     return (
+
                         <ShopCard key={index} image={product} />
                     )
                 })}
-            </HStack >
+            </SimpleGrid >
 
         </>
     );

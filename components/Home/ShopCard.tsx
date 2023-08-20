@@ -17,7 +17,7 @@ const ShopCard: FC<IProps> = ({ image }) => {
     }
     return (
         <>
-            <Stack h={270} w={350} m={2} borderRadius={10} boxShadow={"0px 0px 25px 0px rgba(0, 0, 0, 0.1)"} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} cursor={'pointer'} display={'flex'} alignItems={'center'} justifyContent={'center'} p={5}>
+            <Stack  m={2} borderRadius={10} boxShadow={"0px 0px 25px 0px rgba(0, 0, 0, 0.1)"} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} cursor={'pointer'} display={'flex'} alignItems={'center'} justifyContent={'center'} p={5}>
                 <Image src={image} alt='' width={50} height={50} />
                 <Text color={'#151875'} fontSize={"22px"} fontWeight={'500 !important'}>24/7 Support</Text>
                 <Text textAlign={'center'} color={'gray'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</Text>

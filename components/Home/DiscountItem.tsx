@@ -27,7 +27,7 @@ const DiscountItem: FC<IProps> = (props) => {
                     Discount Item
                 </Text>
             </Box>
-            <Box display={'flex'} justifyContent={'center'} cursor={'pointer'} gap={5} mt={10}>
+            <Box display={'flex'} justifyContent={'center'} alignItems={'center'} cursor={'pointer'} gap={5} mt={10}>
                 {DiscountItemsTabs?.map((workNav, index) => {
                     return (
                         <Text
