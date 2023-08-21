@@ -75,7 +75,7 @@ export default function Footer() {
         <Box
             bg={useColorModeValue('gray.50', 'gray.900')}
             color={useColorModeValue('gray.700', 'gray.200')}>
-            <Container as={Stack} maxW={'9xl'} p={20}>
+            <Container as={Stack} maxW={'9xl'} p={{base:8,md:20,lg:20}}>
                 <SimpleGrid
                     templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
                     spacing={8}>
