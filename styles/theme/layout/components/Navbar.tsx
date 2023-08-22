@@ -240,9 +240,9 @@ const NAV_ITEMS: Array<NavItem> = [
         label: 'Home',
         children: [
             {
-                label: 'Explore Design Work',
-                subLabel: 'Trending Design to inspire you',
-                href: '#',
+                label: 'Products Designs',
+                subLabel: 'Trending Product to inspire you',
+                href: '/shop',
             },
             {
                 label: 'New & Noteworthy',
