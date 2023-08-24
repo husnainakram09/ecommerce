@@ -1,23 +1,17 @@
-import React, { FC } from "react";
 import { Box, Grid, GridItem, Input, Select, SimpleGrid, Text } from "@chakra-ui/react";
-import ProductCard from "./productCard/ProductCard";
+import React, { FC } from "react";
+import ProductCard from "./ProductCard";
 interface IProps { };
 
-const Product: FC<IProps> = (props) => {
+const ProductList: FC<IProps> = (props) => {
     const Images = [
-        '/Assets/shop/product1.png',
-        '/Assets/shop/product2.png',
-        '/Assets/shop/product3.png',
-        '/Assets/shop/product4.png',
-        '/Assets/shop/product5.png',
-        '/Assets/shop/product6.png',
-        '/Assets/shop/product7.png',
-        '/Assets/shop/product8.png',
-        '/Assets/shop/product9.png',
-        '/Assets/shop/product10.png',
-        '/Assets/shop/product11.png',
-        '/Assets/shop/product12.png',
-
+        '/Assets/shopList/ShopList.png',
+        '/Assets/shopList/ShopListOne.png',
+        '/Assets/shopList/ShopListTwo.png',
+        '/Assets/shopList/ShopListThree.png',
+        '/Assets/shopList/ShopListFour.png',
+        '/Assets/shopList/ShopListFive.png',
+        '/Assets/shopList/ShopListSix.png',
     ]
     return (
         <>
@@ -48,7 +42,7 @@ const Product: FC<IProps> = (props) => {
                 </GridItem>
 
             </Grid>
-            <SimpleGrid columns={{ sm: 1, md: 4, lg: 4 }} justifyItems={'center'} gridColumnGap={20} gap={10}>
+            <SimpleGrid columns={{ sm: 1, md: 1, lg: 1 }} justifyContent={'center'}>
                 {Images.map((img: any, index: any) => {
                     return (
                         <div
@@ -60,8 +54,7 @@ const Product: FC<IProps> = (props) => {
                 })}
             </SimpleGrid>
         </>
-
-    );
+    )
 };
 
-export default Product;
+export default ProductList;
