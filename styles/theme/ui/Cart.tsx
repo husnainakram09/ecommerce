@@ -20,7 +20,7 @@ const Cart: FC<IProps> = ({ isLatest }) => {
   return (
     <Stack spacing={4} direction={isLatest ? 'column' : "row"}>
       {iconData.map((icon, index) => (
-        <Stack onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Stack onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} cursor={'pointer'}>
 
           <Image
             key={index}
