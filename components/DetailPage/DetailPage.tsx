@@ -27,7 +27,9 @@ const DetailProductInfo: FC<IProps> = (props) => {
                         {
                             Images.map((img, index) => {
                                 return (
-                                    <RelatedProductCard img={img} key={index} />
+                                    <div key={index} >
+                                        <RelatedProductCard img={img} />
+                                    </div>
                                 )
                             })
                         }
