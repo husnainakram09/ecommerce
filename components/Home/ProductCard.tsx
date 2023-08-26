@@ -1,8 +1,12 @@
 import { Box, Divider, Spacer, Stack, Text } from '@chakra-ui/react'
 import HaktoButton from '@ui/Button'
 import Cart from '@ui/Cart'
-import React, { useState } from 'react'
-const ProductCard = () => {
+import React, { FC, useState } from 'react'
+interface IProps {
+    img: string
+};
+
+const ProductCard: FC<IProps> = ({ img }) => {
     const [isMouseEnter, setIsMouseEnter] = useState(false)
     const handleMouseEnter = () => {
         setIsMouseEnter(true)
@@ -19,7 +23,7 @@ const ProductCard = () => {
                         <Cart />
                     </Box>
                 }
-                <Stack h={"100%"} height={"200%"} align={"center"} justify={"flex-end"} bgImage={"/Assets/chair.png"} bgSize={"contain"} bgPos={"center"} bgColor={!isMouseEnter ? '#F6F7FB' : '#FFFFFF'} bgRepeat={"no-repeat"} pos={"relative"}>
+                <Stack h={"100%"} height={"200%"} align={"center"} justify={"flex-end"} bgImage={img} bgSize={"contain"} bgPos={"center"} bgColor={!isMouseEnter ? '#F6F7FB' : '#FFFFFF'} bgRepeat={"no-repeat"} pos={"relative"}>
 
                 </Stack>
                 {isMouseEnter &&

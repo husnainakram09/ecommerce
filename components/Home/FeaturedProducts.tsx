@@ -9,6 +9,12 @@ const FeaturedProducts = () => {
         568: { items: 2 },
         1024: { items: 3 },
     };
+    const Images = [
+        '/Assets/Featured/FeaturedOne.png',
+        '/Assets/Featured/FeaturedTwo.png',
+        '/Assets/Featured/FeaturedThree.png',
+        '/Assets/Featured/FeaturedFour.png',
+    ]
     return (
         <>
             <Box textAlign={"center"} mt={20}>
@@ -21,9 +27,9 @@ const FeaturedProducts = () => {
                     responsive={responsive}
                     controlsStrategy="alternate"
                 > */}
-                {[1, 1, 1].map((product: any, index: any) => {
+                {Images.map((product: any, index: any) => {
                     return (
-                        <ProductCard key={index} />
+                        <ProductCard key={index} img={product} />
                     )
                 })}
                 {/* </AliceCarousel > */}
