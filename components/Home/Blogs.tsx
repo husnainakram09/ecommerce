@@ -18,7 +18,7 @@ const Blogs: FC<IProps> = (props) => {
                     Leatest Blog
                 </Text>
             </Box>
-            <SimpleGrid columns={{ sm: 1, md: 3 }} justifyItems={'center'} gap={5}>
+            <SimpleGrid columns={{ sm: 1, md: 3 }} justifyItems={'center'} gap={5} py={6}>
                 {images.map((product: any, index: any) => {
                     return (
                         <Box key={index}>

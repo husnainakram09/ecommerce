@@ -22,12 +22,12 @@ export default function BlogCardImage({ img }: any) {
         setIsMouseEnter(false)
     }
     return (
-        <Center py={6} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} cursor={'pointer'}>
+        <Center onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} cursor={'pointer'}>
             <Box
                 maxW={'350px'}
                 w={'full'}
                 bg={useColorModeValue('white', 'gray.900')}
-                boxShadow={'2xl'}
+                boxShadow={'md'}
                 rounded={'md'}
                 p={6}
                 overflow={'hidden'}>
