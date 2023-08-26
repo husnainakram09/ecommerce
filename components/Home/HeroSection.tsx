@@ -19,9 +19,7 @@ const Hero: FC<IProps> = (props) => {
                 <Box>
                     <Image src="/Assets/lamp.png" alt="" width={400} height={400} />
                 </Box>
-
             </GridItem>
-
             <GridItem display={"flex"} alignItems={'center'} justifyContent={'start'} >
                 <Box w={{ lg: "600px", base: "350px", md: '500px' }} justifyContent={'center'} alignItems={'center'} p={5}>
                     <Text color="primary.100" fontSize="24px" fontWeight="bold">

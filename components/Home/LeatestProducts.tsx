@@ -14,32 +14,42 @@ const LatestProduct: FC<IProps> = (props) => {
             id: 1,
             name: "project 1",
             category: "New Arrival",
+            image: '/Assets/NewArrival/newArrivalOne.png'
         },
         {
             id: 2,
             name: "project 2",
             category: "Best Seller",
+            image: '/Assets/NewArrival/newArrivalTwo.png'
+
 
         },
         {
             id: 3,
             name: "project 3",
             category: "Featured",
+            image: '/Assets/NewArrival/newArrivalThree.png'
         },
         {
             id: 4,
             name: "project 4",
             category: "Featured",
+            image: '/Assets/NewArrival/newArrivalFour.png'
+
         },
         {
             id: 5,
             name: "project 5",
             category: 'Special Offer',
+            image: '/Assets/NewArrival/newArrivalFive.png'
+
         },
         {
             id: 6,
             name: "project 6",
             category: "Special Offer",
+            image: '/Assets/NewArrival/newArrivalSix.png'
+
         }
     ]
     useEffect(() => {
@@ -80,7 +90,7 @@ const LatestProduct: FC<IProps> = (props) => {
                         <div
                             key={work.id}
                         >
-                            <LatestProductCard key={work?.id} />
+                            <LatestProductCard key={work?.id} img={work?.image} />
                         </div>
                     )
                 })}
