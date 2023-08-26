@@ -22,7 +22,7 @@ const DetailProductInfo: FC<IProps> = (props) => {
                     <Box mt={20} ms={2}>
                         <Text fontSize={'30px'} color={'#101750'}>Related Products</Text>
                     </Box>
-                    <SimpleGrid columns={{ sm: 1, md: 4, lg: 4 }} justifyItems={'center'} mt={10}>
+                    <SimpleGrid columns={{ sm: 1, md: 4, lg: 4 }} gap={2} justifyItems={'center'} mt={10}>
 
                         {
                             Images.map((img, index) => {
