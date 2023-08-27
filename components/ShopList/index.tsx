@@ -15,7 +15,7 @@ const ProductList: FC<IProps> = (props) => {
     ]
     return (
         <>
-            <Grid templateColumns='repeat(2, 1fr)' mt={20}>
+            {/* <Grid templateColumns='repeat(2, 1fr)' mt={20}>
                 <GridItem w='100%' h='200'  >
                     <Box ms={30}>
                         <Text fontSize={"22px"} fontWeight={'700 !important'} color='secondaryBlue.100' lineHeight={"1.2"}>
@@ -41,7 +41,7 @@ const ProductList: FC<IProps> = (props) => {
                     </Box>
                 </GridItem>
 
-            </Grid>
+            </Grid> */}
             <SimpleGrid columns={{ sm: 1, md: 1, lg: 1 }} justifyContent={'center'}>
                 {Images.map((img: any, index: any) => {
                     return (

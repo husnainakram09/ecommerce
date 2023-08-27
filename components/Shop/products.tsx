@@ -1,9 +1,13 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Box, Grid, GridItem, Input, Select, SimpleGrid, Text } from "@chakra-ui/react";
 import ProductCard from "./productCard/ProductCard";
+import Image from 'next/image'
+import ProductList from "@components/ShopList";
 interface IProps { };
 
 const Product: FC<IProps> = (props) => {
+    const [itemsAlign, setItemsAlign] = useState('Grid')
+
     const Images = [
         '/Assets/shop/product1.png',
         '/Assets/shop/product2.png',
@@ -22,7 +26,7 @@ const Product: FC<IProps> = (props) => {
     return (
         <>
             <Grid templateColumns='repeat(2, 1fr)' mt={20}>
-                <GridItem w='100%' h='200'  >
+                <GridItem w='100%' h='100'  >
                     <Box ms={30}>
                         <Text fontSize={"22px"} fontWeight={'700 !important'} color='secondaryBlue.100' lineHeight={"1.2"}>
                             Ecommerce Acceories & Fashion item
@@ -45,10 +49,20 @@ const Product: FC<IProps> = (props) => {
                             <option value='option3'>Option 3</option>
                         </Select>
                     </Box>
+                    <Box display={'flex'} alignItems={'center'} gap={2}>
+                        <Text>view:</Text>
+                        <Box onClick={() => setItemsAlign('Grid')} cursor={'pointer'}>
+                            <Image src='/Assets/grid.svg' alt="Grid" width={20} height={20} />
+                        </Box>
+                        <Box onClick={() => setItemsAlign('List')} cursor={'pointer'}>
+                            <Image src='/Assets/list.svg' alt="List" width={20} height={20} />
+                        </Box>
+
+                    </Box>
                 </GridItem>
 
             </Grid>
-            <SimpleGrid columns={{ sm: 1, md: 4, lg: 4 }} justifyItems={'center'} gridColumnGap={20} gap={10}>
+            {itemsAlign === 'Grid' ? <SimpleGrid columns={{ sm: 1, md: 4, lg: 4 }} justifyItems={'center'} gridColumnGap={20} gap={10}>
                 {Images.map((img: any, index: any) => {
                     return (
                         <div
@@ -59,6 +73,9 @@ const Product: FC<IProps> = (props) => {
                     )
                 })}
             </SimpleGrid>
+                :
+                <ProductList />
+            }
         </>
 
     );

@@ -9,6 +9,8 @@ const DiscountItemCard: FC<IProps> = (props) => {
         <Grid
             gridTemplateColumns={{ lg: "repeat(2, 1fr)", md: "repeat(2, 1fr)", sm: "repeat(1, 1fr)" }} // Adjusted templateColumns
             h={{ lg: "100%", md: '100%', base: "20%" }}
+            display={{ md: 'flex' }}
+            alignItems={{ md: 'center' }}
         >
             <GridItem >
                 <GridItem display={'grid'} flexDirection={'column'} alignItems={'start'} justifyContent={'start'}
