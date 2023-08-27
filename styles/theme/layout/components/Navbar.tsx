@@ -247,7 +247,7 @@ const NAV_ITEMS: Array<NavItem> = [
             {
                 label: 'Shop',
                 subLabel: 'Product Designes',
-                href: '/shoplist',
+                href: '/shop',
             },
         ],
     },
