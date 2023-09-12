@@ -6,9 +6,10 @@ interface IProps {
     text: any
     type?: "primary" | "success"
     size?: "sm" | "md" | "lg"
+    action?: any
 };
 
-const HaktoButton: FC<IProps> = ({ button, text, type = "primary", size }) => {
+const HaktoButton: FC<IProps> = ({ button, text, type = "primary", size, action }) => {
     const theme = useTheme();
     const { primary } = theme.colors;
     return (
@@ -20,6 +21,7 @@ const HaktoButton: FC<IProps> = ({ button, text, type = "primary", size }) => {
                 bg={`${type}.100`}
                 _hover={{ bg: 'primary.100' }}
                 {...button}
+                type={action}
             // ui  kit is used for multi purpose 
             // so design it that you can use every where
             // >Shop Now</Button>
