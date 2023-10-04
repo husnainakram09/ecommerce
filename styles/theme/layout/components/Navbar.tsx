@@ -58,6 +58,7 @@ export default function WithSubnavigation() {
                             textAlign={useBreakpointValue({ base: 'center', md: 'right' })}
                             color={useColorModeValue('gray.800', 'white')} fontSize={'30px'} cursor={'pointer'}
                             _hover={{ color: 'primary.100' }}
+                            onClick={() => {window.location.href = './'}}
                         >
 
                             Hakto
