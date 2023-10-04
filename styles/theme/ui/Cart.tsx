@@ -20,17 +20,14 @@ const Cart: FC<IProps> = ({ isLatest }) => {
   return (
     <Stack spacing={4} direction={isLatest ? 'column' : "row"}>
       {iconData.map((icon, index) => (
-        <Stack onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} cursor={'pointer'}>
-
+        <Stack key={index} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} cursor={'pointer'}>
           <Image
-            key={index}
             src={icon.src}
             alt={icon.alt}
             width={20}
             height={20}
           />
         </Stack>
-
       ))}
     </Stack>
   );
