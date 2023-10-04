@@ -16,6 +16,8 @@ import { ReactNode } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 import HaktoInput from '@ui/Input'
+import styles from './footerStyle.module.css'
+
 const Logo = (props: any) => {
     return (
         <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -116,19 +118,19 @@ export default function Footer() {
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Catagories</ListHeader>
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Laptops & Computers
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Cameras & Photography
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Smart Phones & Tablets
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Video Games & Consoles
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Waterproof Headphones
                         </Box>
                     </Stack>
@@ -136,19 +138,19 @@ export default function Footer() {
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Customer Care</ListHeader>
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             My Account
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Discount
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Returns
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Orders History
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Order Tracking
                         </Box>
                     </Stack>
@@ -156,22 +158,22 @@ export default function Footer() {
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Pages</ListHeader>
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Blog
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Browse the Shop
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Category
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Pre-Built Pages
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Visual Composer Elements
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             WooCommerce Pages
                         </Box>
                     </Stack>
