@@ -11,6 +11,7 @@ import {
     Input,
     IconButton,
     useColorModeValue,
+    Image
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
@@ -112,6 +113,16 @@ export default function Footer() {
                             <Text fontSize={"16px"} fontWeight={'700 !important'} color='lightgray'>
                                 17 Princess Road, London, Greater London NW1 8JR, UK
                             </Text>
+                        </Box>
+                        <Box color={'secondaryBlue.100'}>
+                            <ListHeader>Socials</ListHeader>
+                            <div className={styles.socials}>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/5968/5968764.png' alt='facebook' /></a>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/4494/4494497.png' alt='linkedin' /></a>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/145/145808.png' alt='pinterest' /></a>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/1384/1384060.png' alt='youtube' /></a>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/3670/3670051.png' alt='youtube' /></a>
+                            </div>
                         </Box>
                     </Stack>
                     <Stack align={'flex-start'} color={'lightgray'} fontSize={"18px"}>
