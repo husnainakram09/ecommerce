@@ -11,3 +11,7 @@
 .socials a {
     width: 28px;
 }
+
+#otherlinks {
+    color: var(--chakra-colors-primary-100);
+}

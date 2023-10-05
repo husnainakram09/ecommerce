@@ -73,6 +73,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
     )
 }
 
+let primaryColor = "rgb(83, 83, 83)";
 export default function Footer() {
     return (
         <Box
@@ -107,10 +108,10 @@ export default function Footer() {
                             />
                         </Stack>
                         <Box>
-                            <Text fontSize={"16px"} fontWeight={'700 !important'} color='lightgray'>
+                            <Text fontSize={"16px"} fontWeight={'700 !important'} color={`${primaryColor}`}>
                                 Contact Info
                             </Text>
-                            <Text fontSize={"16px"} fontWeight={'700 !important'} color='lightgray'>
+                            <Text fontSize={"16px"} fontWeight={'700 !important'} color={`${primaryColor}`}>
                                 17 Princess Road, London, Greater London NW1 8JR, UK
                             </Text>
                         </Box>
@@ -125,7 +126,7 @@ export default function Footer() {
                             </div>
                         </Box>
                     </Stack>
-                    <Stack align={'flex-start'} color={'lightgray'} fontSize={"18px"}>
+                    <Stack align={'flex-start'} color={`${primaryColor}`} fontSize={"18px"}>
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Catagories</ListHeader>
                         </Box>
@@ -145,7 +146,7 @@ export default function Footer() {
                             Waterproof Headphones
                         </Box>
                     </Stack>
-                    <Stack align={'flex-start'} color={'lightgray'} fontSize={"18px"}>
+                    <Stack align={'flex-start'} color={`${primaryColor}`} fontSize={"18px"}>
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Customer Care</ListHeader>
                         </Box>
@@ -165,7 +166,7 @@ export default function Footer() {
                             Order Tracking
                         </Box>
                     </Stack>
-                    <Stack align={'flex-start'} color={'lightgray'} fontSize={"18px"}>
+                    <Stack align={'flex-start'} color={`${primaryColor}`} fontSize={"18px"}>
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Pages</ListHeader>
                         </Box>
@@ -190,6 +191,24 @@ export default function Footer() {
                     </Stack>
 
                 </SimpleGrid>
+                <Stack style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', padding: '15px'}} color={`${primaryColor}`} fontSize={"18px"}>
+                    <Box className={styles.links} as="a" href={'#'}>
+                        Terms and Conditions
+                    </Box>
+                    <span> | </span>
+                    <Box className={styles.links} as="a" href={'#'}>
+                        Privacy Policy
+                    </Box>
+                    <span> | </span>
+                    <Box className={styles.links} as="a" href={'#'}>
+                        Return and Refund Policy
+                    </Box>
+                </Stack>
+                <Stack>
+                    <Box style={{textAlign: 'center'}} color={`${primaryColor}`} fontSize={"14px"}>
+                        Copyright &copy; 2023 HEKTO. All Rights Reserved.
+                    </Box>
+                </Stack>
             </Container>
         </Box>
     )
