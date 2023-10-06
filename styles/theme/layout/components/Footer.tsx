@@ -11,11 +11,14 @@ import {
     Input,
     IconButton,
     useColorModeValue,
+    Image
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 import HaktoInput from '@ui/Input'
+import styles from './footerStyle.module.css'
+
 const Logo = (props: any) => {
     return (
         <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -70,6 +73,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
     )
 }
 
+let primaryColor = "rgb(83, 83, 83)";
 export default function Footer() {
     return (
         <Box
@@ -104,79 +108,107 @@ export default function Footer() {
                             />
                         </Stack>
                         <Box>
-                            <Text fontSize={"16px"} fontWeight={'700 !important'} color='lightgray'>
+                            <Text fontSize={"16px"} fontWeight={'700 !important'} color={`${primaryColor}`}>
                                 Contact Info
                             </Text>
-                            <Text fontSize={"16px"} fontWeight={'700 !important'} color='lightgray'>
+                            <Text fontSize={"16px"} fontWeight={'700 !important'} color={`${primaryColor}`}>
                                 17 Princess Road, London, Greater London NW1 8JR, UK
                             </Text>
                         </Box>
+                        <Box color={'secondaryBlue.100'}>
+                            <ListHeader>Socials</ListHeader>
+                            <div className={styles.socials}>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/5968/5968764.png' alt='facebook' /></a>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/4494/4494497.png' alt='linkedin' /></a>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/145/145808.png' alt='pinterest' /></a>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/1384/1384060.png' alt='youtube' /></a>
+                                <a href='#'><Image src='https://cdn-icons-png.flaticon.com/128/3670/3670051.png' alt='youtube' /></a>
+                            </div>
+                        </Box>
                     </Stack>
-                    <Stack align={'flex-start'} color={'lightgray'} fontSize={"18px"}>
+                    <Stack align={'flex-start'} color={`${primaryColor}`} fontSize={"18px"}>
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Catagories</ListHeader>
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Laptops & Computers
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Cameras & Photography
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Smart Phones & Tablets
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Video Games & Consoles
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Waterproof Headphones
                         </Box>
                     </Stack>
-                    <Stack align={'flex-start'} color={'lightgray'} fontSize={"18px"}>
+                    <Stack align={'flex-start'} color={`${primaryColor}`} fontSize={"18px"}>
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Customer Care</ListHeader>
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             My Account
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Discount
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Returns
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Orders History
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Order Tracking
                         </Box>
                     </Stack>
-                    <Stack align={'flex-start'} color={'lightgray'} fontSize={"18px"}>
+                    <Stack align={'flex-start'} color={`${primaryColor}`} fontSize={"18px"}>
                         <Box color={'secondaryBlue.100'}>
                             <ListHeader>Pages</ListHeader>
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Blog
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Browse the Shop
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Category
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Pre-Built Pages
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             Visual Composer Elements
                         </Box>
-                        <Box as="a" href={'#'}>
+                        <Box className={styles.links} as="a" href={'#'}>
                             WooCommerce Pages
                         </Box>
                     </Stack>
 
                 </SimpleGrid>
+                <Stack style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', padding: '15px'}} color={`${primaryColor}`} fontSize={"18px"}>
+                    <Box className={styles.links} as="a" href={'#'}>
+                        Terms and Conditions
+                    </Box>
+                    <span> | </span>
+                    <Box className={styles.links} as="a" href={'#'}>
+                        Privacy Policy
+                    </Box>
+                    <span> | </span>
+                    <Box className={styles.links} as="a" href={'#'}>
+                        Return and Refund Policy
+                    </Box>
+                </Stack>
+                <Stack>
+                    <Box style={{textAlign: 'center'}} color={`${primaryColor}`} fontSize={"14px"}>
+                        Copyright &copy; 2023 HEKTO. All Rights Reserved.
+                    </Box>
+                </Stack>
             </Container>
         </Box>
     )

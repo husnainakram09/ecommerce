@@ -12,8 +12,8 @@ const HaktoInput: FC<IProps> = (props) => {
         <>
             <Stack spacing={4}>
                 <InputGroup w='300px'>
-                    <Input placeholder='' _focus={{ boxShadow: 'none' }} />
-                    <InputRightElement bg='primary.100'>
+                    <Input placeholder='Search Furniture' _focus={{ boxShadow: 'none' }} />
+                    <InputRightElement style={{ cursor: 'pointer' }} bg='primary.100'>
                         <Search2Icon color='white' />
                     </InputRightElement>
                 </InputGroup>

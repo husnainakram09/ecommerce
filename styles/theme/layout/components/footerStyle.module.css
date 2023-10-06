@@ -1,0 +1,17 @@
+.links:hover {
+    color: var(--chakra-colors-primary-100);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.socials a {
+    width: 28px;
+}
+
+#otherlinks {
+    color: var(--chakra-colors-primary-100);
+}
